@@ -1,0 +1,469 @@
+/* HOME  */
+
+.grid-container {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    padding-top: 10%;
+    padding-bottom: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(4, minmax(0, 1fr)); 
+    row-gap: 10px;
+    overflow: auto;
+    letter-spacing: 2px;
+
+}
+
+.firstrow {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    object-fit: cover;
+    height: 300px;
+    width: 100%;
+}
+
+.secondrow {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    flex-wrap: nowrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 20px;
+}
+
+.grid-item.childrensclub {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+}
+
+.thirdrow {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 3;
+    flex-wrap: wrap;
+}
+
+.grid-item.mammooth {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    height: 100%;
+    width: 100%;
+}
+
+.grid-item.museumnight {
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    height: 100%;
+    width: 100%;
+}
+
+.grid-item img {
+    object-fit: cover;
+    height: 70vh;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.fourthrow {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 5; 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;
+    background-color: #F3F3F3;
+}
+.image-container {
+    position: relative;
+}
+
+.overlay {
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    line-height: 30px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #0D3655;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: opacity 0.3s ease;
+}
+
+.image-container:hover .overlay {
+    opacity: 1;
+    background: #F3F3F3; 
+}
+
+.text-mobile {
+    display:  none;
+    text-align: center;
+  }
+
+.mobile-elements {
+    display: none;
+    font-size: 30px;
+    position: sticky;
+}
+
+.mobile-elements i {
+    margin-left: 30px;
+}
+
+
+/* EXHIBITIONS  */
+
+.grid-item-exhibition {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    width: 70vw;
+    height: 50vh;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    letter-spacing: 10px;
+}
+
+.grid-item-exhibition.cosmology {
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+.grid-item-exhibition.evolution {
+    grid-row-start: 2;
+    grid-row-end: 2;
+  }
+  
+  .grid-item-exhibition.biomedicine {
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+  
+  .grid-item-exhibition.robotics {
+    grid-row-start: 4;
+    grid-row-end: 5;
+  }
+  
+  .grid-item-exhibition.ecology {
+    grid-row-start: 5;
+    grid-row-end: 6;
+  }
+
+.grid-item-exhibition:hover .overlay {
+    opacity: 1;
+    background: #F3F3F3; 
+}
+
+.grid-item-exhibition img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* COSMOLOGY  */
+
+.background {
+    grid-row-start: 1;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    background-image:url(/images/cosmologybackground.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 200vh;
+  } 
+  
+  .content {
+    background: var(--main-bg-color);
+    opacity: 0.8;
+  }
+  
+  .headtitle {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image:url(/images/cosmologybackground.jpg);
+    font-size: 50px;
+    font-weight: 00; 
+    height: 30vh;
+    text-align: center;
+    padding-bottom: 2%;
+    padding-top: 1%;
+  }
+  
+  .about {
+    text-align: center;
+    line-height: 45px;
+    font-size: 25px;
+    background-color: var(--main-bg-color);
+    height: 100vh;
+    border-radius: 20px;
+    text-transform: none;
+    margin-top: 10%;
+    padding: 5%;
+    opacity: 0.8;
+  }
+
+  /* VISIT US */
+  
+  .timetable {
+    grid-column-start: span 2;
+    grid-row-start: 1;
+    padding-top: 5%;
+    box-shadow: var( --box-shadow-style);
+    border-radius: 20px;
+    background-color: var(--card-color);
+    color:var(--main-text-color);
+    text-align: center;
+    height: auto;
+  }
+  
+  .hours {
+    padding-top: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+  }
+  
+  h2 {
+    border-radius:var( --border-radius-style);
+    color:#0D3655;
+    grid-column-start: 2;
+    grid-row-start: 1;
+  }
+  
+  tr, td {
+    padding: 15px;
+    font-size: 18px;
+  }
+
+  .googlemap {
+    box-shadow: var(--box-shadow-style);
+    border-radius: 20px;
+    background-color:var(--main-bg-color);
+    color: var(--main-text-color);
+    width: 210%;
+  }
+  
+  .access {
+    grid-column-start: span 4;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    box-shadow: var(--box-shadow-style);
+    border-radius: var(--border-radius-style);
+    color:var(--main-text-color);
+    background-color: var(--card-color);
+    padding: 20px;
+    line-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  /* GET INVOLVED */
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto auto;
+    grid-gap: 40px; 
+    margin: 0 auto;
+    width: auto;
+    min-height: 100vh;
+    text-align: center;
+    padding: 10%;
+    line-height: 25px;
+
+    grid-template-areas:
+      "support"
+      "volunteer"
+      "form";
+}
+
+.support,
+.volunteer,
+.internship {
+    box-shadow: var(--box-shadow-style);
+    border-radius: 20px;
+    background-color: var(--card-color);
+    color: var(--main-text-color);
+    padding-top: 10%;
+    line-height: 150%;
+}
+
+.support {
+    grid-area: support;
+    grid-column: span 4;
+    grid-row: 1;
+    padding-top: 20px;
+    height: 20em;
+}
+
+.textblock {
+    padding: 50px;
+    margin: 30px;
+    word-wrap: break-word;
+}
+
+.volunteer {
+    grid-area: volunteer;
+    grid-column: span 2;
+    grid-row: 2;
+    margin-right: 2%;
+    height: 70vh;
+}
+
+.internship {
+    grid-area: internship;
+    grid-column: span 2;
+    grid-row: 2;
+    margin: 0;
+    height: 70vh;
+}
+
+.getinvolved {
+    box-shadow: 0 2px 6px 0 #9F9E9E;
+    border-radius: 20px;
+    background-color: #0D3655;
+}
+
+
+/* MEDIA QUERIES */
+
+
+@media only screen and (max-width: 767px) {
+    .mobile-elements {
+        display: flex; /* or block, depending on your layout preference */
+        gap: 10px; /* Space between icons, you can adjust this */
+        justify-content: center; /* Centers the icons */
+    }
+    
+    .navlink {
+        display: none; /* Hide navlinks */
+    }
+    .text-mobile {
+        display: block;
+        background-color: #F3F3F3; /* Background color for text */
+        color: #0D3655; /* Text color */
+        padding: 20px; /* Add padding to create space around the text */
+      }
+  
+      .grid-item.energetica {
+          padding-top: 40%;
+      }
+    
+    .image-container:hover .overlay {
+        display: none;
+    }
+
+    .grid-container {
+        grid-gap: 0px;
+    }
+
+    .title, .subtitle {
+        font-size: 15px;
+    }
+
+    .logo {
+        width: 150px;
+        height: 150px;
+        padding-bottom: 70px;
+    }
+    .container {
+        grid-template-columns: 1fr; 
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+          "support"
+          "volunteer"
+          "internship";
+        padding: 5%;
+        margin: 0 auto;
+    }
+
+    .support {
+        grid-column: 1; 
+        grid-row: 1;
+    }
+
+    .volunteer {
+        grid-column: 1;
+        grid-row: 2;
+        margin-right: 0;
+    }
+
+    .internship {
+    grid-column: 1; 
+    grid-row: 3;
+}
+
+#involved-form {
+    grid-area: form;
+    grid-row: 4;
+    grid-column: 1;
+}
+
+.timetable {
+    grid-column-start: 1; 
+    grid-column-end: -1; 
+    text-align: center; 
+}
+
+.hours {
+    flex-direction: column; 
+    padding: 10px 0; 
+    text-align: center; 
+    padding: 45px;
+}
+
+h2 {
+    grid-column-start: 1; 
+    grid-column-end: -1; 
+    text-align: center;
+    padding: 10px 0; 
+}
+
+.googlemap {
+    width: 100%; 
+    margin: 10px 0; 
+    text-align: center;
+}
+
+.access {
+    grid-column-start: 1;
+    grid-column-end: -1;  
+    flex-direction: column; 
+    text-align: left;
+}
+
+tr, td {
+    text-align: center; 
+}
+
+}
