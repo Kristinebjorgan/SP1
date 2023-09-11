@@ -145,7 +145,7 @@ header {
     grid-column-end: 4;
     grid-row-start: 1;
     grid-row-end: 1;
-    font-size: 25px;
+    font-size: 30px;
     letter-spacing: 5px;
 }
     
@@ -217,7 +217,7 @@ footer i:hover {
     opacity: 0.7;
 }
 
-footer h4 {
+footer h3 {
     margin: 0 10px;
     color: var(--main-bg-color);
 }
@@ -265,6 +265,8 @@ form input[type="submit"] {
     background-color: #0D3655;
     color: #F3F3F3;
     resize: vertical;
+    font-family: "Dosis";
+    text-transform: uppercase;
 }
 
 form input[type="submit"] {
