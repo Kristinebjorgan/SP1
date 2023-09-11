@@ -71,6 +71,10 @@ main {
     line-height: 25px;
  }
 
+h2 {
+    color: var(--main-text-color);
+}
+
 a {
     color: var(--link-color);
     text-decoration: none;
@@ -179,6 +183,17 @@ header {
       color: var(--main-text-color);
 }
 
+.mobile-elements {
+    display: none;
+    font-size: 30px;
+    position: sticky;
+}
+
+.mobile-elements i {
+    margin-left: 30px;
+}
+
+
 /* FOOTER  */
 
 footer {
@@ -251,6 +266,7 @@ form {
     flex-direction: column; 
     width: 100%;
     gap: 15px;
+    color: var(--main-form-color);
 }
 
 form input[type="text"], 
@@ -276,13 +292,14 @@ form input[type="submit"] {
     text-transform: uppercase;
     margin-bottom: 10px; 
     margin: 20px;
+    color: var(--main-text-color);
 }
 
 input::placeholder {
-    color: #f2f2f2;
+    color: var(--main-formtext-color);
 }
   
 input[type=submit]:hover {
     background-color: #9F9E9E;
-    color: #0D3655;
+    color: var(--main-text-color);
 }

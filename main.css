@@ -1,36 +1,31 @@
 /* HOME  */
 
 .grid-container {
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 2;
-    grid-row-end: 4;
-    padding-top: 10%;
-    padding-bottom: 40px;
+    grid-column: 1 / 4;
+    grid-row: 2 / 4;
+    grid-template-rows: repeat(4, minmax(0, 1fr));
+    overflow: auto;
+    letter-spacing: 2px;
+    padding: 10% 0 40px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: repeat(4, minmax(0, 1fr)); 
     row-gap: 10px;
-    overflow: auto;
-    letter-spacing: 2px;
+}
 
+.firstrow, .secondrow, .thirdrow, .fourthrow {
+    grid-column: 1 / 4;
 }
 
 .firstrow {
-    grid-column-start: 1;
-    grid-column-end: 4;
     grid-row-start: 1;
-    grid-row-end: 1;
     object-fit: cover;
     height: 300px;
     width: 100%;
 }
 
 .secondrow {
-    grid-column-start: 1;
-    grid-column-end: 4;
     grid-row-start: 2;
-    grid-row-end: 2;
     flex-wrap: nowrap;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -38,40 +33,18 @@
     grid-gap: 20px;
 }
 
-.grid-item.childrensclub {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 1;
-    height: 100%;
-    width: 100%;
-    object-fit: fill;
-}
-
 .thirdrow {
-    grid-column-start: 1;
-    grid-column-end: 4;
     grid-row-start: 3;
-    grid-row-end: 3;
     flex-wrap: wrap;
 }
 
-.grid-item.mammooth {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 1;
-    height: 100%;
-    width: 100%;
-}
-
-.grid-item.museumnight {
-    grid-column-start: 3;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 1;
-    height: 100%;
-    width: 100%;
+.fourthrow {
+    grid-row-start: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;
+    background-color: var(--main-bg-color);
 }
 
 .grid-item img {
@@ -81,17 +54,6 @@
     border-radius: 10px;
 }
 
-.fourthrow {
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 4;
-    grid-row-end: 5; 
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    flex-direction: column;
-    background-color: var(--main-bg-color);
-}
 .image-container {
     position: relative;
 }
@@ -122,17 +84,6 @@
     display:  none;
     text-align: center;
   }
-
-.mobile-elements {
-    display: none;
-    font-size: 30px;
-    position: sticky;
-}
-
-.mobile-elements i {
-    margin-left: 30px;
-}
-
 
 /* EXHIBITIONS  */
 
@@ -419,6 +370,7 @@
     .support {
         grid-column: 1; 
         grid-row: 1;
+        height: 100%;
     }
 
     .volunteer {
@@ -428,7 +380,7 @@
     }
 
     .internship {
-    grid-column: 1; 
+    grid-column: 1;
     grid-row: 3;
 }
 
@@ -473,6 +425,10 @@ h2 {
 
 tr, td {
     text-align: center; 
+}
+
+footer {
+    font-size: 13px;
 }
 
 }
