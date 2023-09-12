@@ -85,7 +85,6 @@ a:hover {
 }
 
 #back-button {
-    position: fixed;
     bottom: 10px;
     right: 10px;
     z-index: 99;
@@ -93,17 +92,17 @@ a:hover {
     border: none;
     outline: none;
     background-color: var(--card-color);
-    color:#0D3655;
+    color:var(--main-text-color);
     cursor: pointer;
-    padding: 15px;
+    padding: 10px;
     border-radius: 4px;
-    z-index: 1;
     border-radius: var(--border-radius-style);
+    position: fixed;
 
 }
 #back-button:hover {
-    background-color: var(--main-text-color);
-    color:#F3F3F3;
+    border-color: #9F9E9E;
+    border-style: double;
 }
 
 img {
@@ -208,7 +207,6 @@ footer {
     padding: 20px 20px;
     flex-wrap: nowrap;
     min-height: 60px;
-    z-index: 1000;
 }
 
 .footer-texts {
@@ -292,7 +290,7 @@ form input[type="submit"] {
     text-transform: uppercase;
     margin-bottom: 10px; 
     margin: 20px;
-    color: var(--main-text-color);
+    color: var(--main-bg-color);
 }
 
 input::placeholder {
