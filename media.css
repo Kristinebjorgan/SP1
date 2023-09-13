@@ -14,6 +14,10 @@
 
 @media only screen and (max-width: 1098px) {
 
+    .title, .subtitle {
+        font-size: 20px;
+    }
+
     .mobile-elements {
         display: flex; 
         gap: 10px; 

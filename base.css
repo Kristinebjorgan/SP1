@@ -150,6 +150,7 @@ header {
 .title {
     grid-area: title;
     align-self: center;
+    font-size: 30px;
 }
 
 .subtitle {
