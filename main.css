@@ -3,7 +3,6 @@
 .grid-container {
     grid-column: 1 / 4;
     grid-row: 2 / 4;
-    grid-template-rows: repeat(4, minmax(0, 1fr));
     overflow: auto;
     letter-spacing: 2px;
     padding: 10% 0 40px;
@@ -79,7 +78,6 @@
     height: 100%;
     line-height: 30px;
     color: var(--main-text-color);
-    background-color: rgba(255, 255, 255, 0.5);
     position: absolute;
     display: flex;
     justify-content: center;
@@ -112,33 +110,7 @@
     margin-bottom: 30px;
     letter-spacing: 10px;
     font-size: 30px;
-    text-decoration: solid;
 }
-
-.grid-item-exhibition.cosmology {
-    grid-row-start: 1;
-    grid-row-end: 1;
-}
-
-.grid-item-exhibition.evolution {
-    grid-row-start: 2;
-    grid-row-end: 2;
-  }
-  
-  .grid-item-exhibition.biomedicine {
-    grid-row-start: 3;
-    grid-row-end: 4;
-  }
-  
-  .grid-item-exhibition.robotics {
-    grid-row-start: 4;
-    grid-row-end: 5;
-  }
-  
-  .grid-item-exhibition.ecology {
-    grid-row-start: 5;
-    grid-row-end: 6;
-  }
 
 .grid-item-exhibition:hover .overlay {
     opacity: 0.8;
