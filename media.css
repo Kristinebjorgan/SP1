@@ -1,0 +1,299 @@
+
+/* MEDIA QUERIES */
+
+
+@media screen and (min-width: 1281px) {
+    body {
+        font-size: 18px;
+        line-height: 1.6;
+    }
+}
+
+/* TABLET */
+
+
+@media only screen and (max-width: 1098px) {
+
+    .mobile-elements {
+        display: flex; 
+        gap: 10px; 
+        justify-content: center;
+    }
+    
+    .navlink {
+        display: none;
+    }
+    .text-mobile {
+        display: block;
+        background-color: #F3F3F3;
+        color: #0D3655; 
+        padding: 20px; 
+      }
+
+/* GLOBAL */
+
+.container {
+    grid-template-columns: 1fr; 
+    padding: 2em;
+}
+
+
+/* HEADER */ 
+
+.title, .subtitle {
+    font-size: 20px;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+}
+
+.mobile-elements {
+        display: flex; 
+        gap: 4em; 
+        justify-content: center;
+}
+    
+.navlink {
+        display: none; 
+}
+
+
+.text-mobile {
+        display: block;
+        background-color: #F3F3F3; 
+        color: #0D3655; 
+        font-size: 16px;
+ }
+
+ .fourthrow {
+    box-shadow: var(--box-shadow-style);
+    background-color: var(--card-color);
+    border-radius: var(--border-radius-style);
+    margin: 1em;
+ }
+
+ .formcontainer {
+    margin: 20px;
+ }
+
+ /* HOME */ 
+
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .firstrow, .secondrow, .thirdrow, .fourthrow {
+        grid-column: 1 / 2;
+    }
+
+    .firstrow {
+        height: auto;  
+        background-color: var(--card-color);
+        margin-bottom: 2em;
+    }
+
+    .grid-item.aeronautic .text-mobile {
+        background-color: var(--card-color);
+        border-radius: var(--border-radius-style);
+    }
+
+    .secondrow {
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+    }
+
+    .grid-item img {
+        height: 300px;  
+    }
+
+    .overlay {
+        display: none;
+    }
+
+    .text-mobile {
+        display: block;
+        padding: 20px;  
+    }
+
+    .grid-container a {
+        text-decoration: underline;
+    }
+
+    .image-container {
+        position: static;
+    }
+
+    .grid-item img.CSMC {
+        object-position: top;
+    }
+
+/* EXHIBITIONS */ 
+
+.grid-item-exhibition {
+    width: 100%; 
+}
+
+.grid-item-exhibition img {
+    width: 100%;  
+    height: 100%; 
+}
+
+.mobtext {
+    display: block;
+    padding: 20px; 
+}
+
+.grid-item-exhibition .overlay {
+    opacity: 0.6;
+    letter-spacing: 13px;
+    text-decoration: none;;
+}
+
+.grid-item-exhibition a {
+    text-decoration: none;
+}
+
+/* COSMOLOGY */ 
+
+.background {
+    grid-row-start: 1;
+    grid-row-end: 3; 
+    grid-column-start: 1;
+    grid-column-end: 2; 
+    height: 100%; 
+    padding-bottom: 5%;
+}
+
+.headtitle {
+    font-size: 30px; 
+    height: auto; 
+    padding: 5% 0; 
+}
+
+.about {
+    font-size: 18px; 
+    line-height: 30px;
+    height: auto; 
+    padding: 5%;
+    margin-top: 5%;
+}
+
+/* VISIT */ 
+
+.timetable,
+.map,
+.access,
+#back-button {
+    grid-column: 1 / -1; 
+    grid-row: auto;  
+}
+
+.googlemap {
+    width: 100%;
+    max-width: 100%;
+    height: 60vh;
+ }
+
+ .access, .access h3 {
+    text-align: left;
+ }
+
+
+
+/* INVOLVED */
+
+.container-inv {
+    display: grid;
+    grid-template-columns: 1fr; /* Only one column now */
+    grid-gap: 40px; 
+    margin: 0 auto;
+    width: auto;
+    min-height: 100vh;
+    text-align: center;
+    padding: 10%;
+    line-height: 25px;
+}
+
+.support,
+.volunteer,
+.internship,
+.formcontainer1 {
+    box-shadow: var(--box-shadow-style);
+    border-radius: 20px;
+    background-color: var(--card-color);
+    color: var(--main-text-color);
+    line-height: 150%;
+    padding: 1em;
+    grid-column: 1 / -1;
+    gap: 1em;
+}
+
+.textblock {
+    word-wrap: break-word;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.getinvolved {
+    box-shadow: var(--box-shadow-style);
+    border-radius: 20px;
+    background-color:var(--main-bg-color);
+    grid-column: 1 / -1;
+    padding-top: 1em;
+}
+
+}
+
+/* FOOTER */
+
+.footer-texts, .footer-icons h3 {
+    font-size: 13px;
+    
+}
+
+@media only screen and (max-width: 550px) {
+    .mobile-elements {
+        display: flex; 
+        justify-content: center;
+    }
+
+    .logo {
+        height: 100px;
+        width: 100px;
+    }
+
+    .title, .subtitle {
+        font-size: 10px;
+    }
+
+    .text {
+        font-size: 10px;
+        line-height: 100%;
+    }  
+
+/* HEADER */ 
+
+.title, .subtitle {
+    font-size: 16px;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+}
+
+.mobile-elements {
+        display: flex; 
+        gap: 2em; 
+        justify-content: center;
+}
+    
+.navlink {
+        display: none; 
+}
+ 
+}
+

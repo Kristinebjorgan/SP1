@@ -58,17 +58,18 @@ main {
     background-color: var(--main-bg-color);
 }
 
-  .container {
+.container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto auto auto;
     grid-gap: 40px; 
     margin: 0 auto;
-    width: auto;
+    max-width: 1200px;
     min-height: 100vh;
+    width: auto;
     text-align: center;
-    padding: 10%;
     line-height: 25px;
+    box-sizing: border-box;
  }
 
 h2 {
@@ -120,45 +121,50 @@ header {
     background-color: var(--header-bg-color);
     color: var(--main-text-color);
     padding: var(--default-padding);
-    height: 300px;
+    height: 350px;
     margin: 0;
     top: 0;
     text-align: center;
     letter-spacing: 3px;
     overflow: auto;
     flex-wrap: nowrap;
+    overflow-y: hidden;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    row-gap: 0px;
+    grid-template-columns: 1fr 1fr 1fr; /* 3 columns */
+    grid-template-rows: 1fr 1fr; /* 2 rows */
+    grid-template-areas: 
+        "title logo subtitle" 
+        "nav nav nav"; 
 }
 
 .logo {
-    grid-column-start: 2;
-    grid-row-start: 1;
+    grid-area: logo;
+    justify-self: center;
+    align-self: center; 
     min-width: 10vh;
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     max-width: 100%;
-    margin-left: 20%;
+}
+
+.title {
+    grid-area: title;
+    align-self: center;
 }
 
 .subtitle {
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 1;
+    grid-area: subtitle;
+    align-self: center;
     font-size: 30px;
     letter-spacing: 5px;
 }
     
 .nav {
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 2;
-    grid-row-end: 2;
+    grid-column: 1 / 4;
+    grid-row: 2 / 2;
     background-color: var(--header-bg-color);
     padding-bottom: 0px;
+    margin-top: 3%;
  } 
     
 .navlink {
@@ -170,16 +176,18 @@ header {
     box-shadow: 0 2px 6px 0 var(--hover-color);
     color:var(--main-text-color);
     text-transform: uppercase;
-    border-radius: 5px;  
+    border-radius: 12px;  
     text-decoration: none;
     font-size: 20px;
-    margin: 0 20px;
-    padding: 5px;
+    margin: 0 70px;
+    padding: 10px;
 } 
     
 .navlink:hover {
-      font-size: 140%;
+      font-size: 150%;
       color: var(--main-text-color);
+      transition: ease-in-out .3s;
+      background-color: var(--card-color);
 }
 
 .mobile-elements {
@@ -187,11 +195,6 @@ header {
     font-size: 30px;
     position: sticky;
 }
-
-.mobile-elements i {
-    margin-left: 30px;
-}
-
 
 /* FOOTER  */
 

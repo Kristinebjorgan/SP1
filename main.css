@@ -54,7 +54,7 @@
     border-radius: 10px;
 }
 
-.text h2:hover {
+.text a :hover {
     text-decoration: underline;
 }
 
@@ -64,6 +64,7 @@
 
 .text {
     padding: 20px;
+    text-align: center;
 }
 
 .image-container {
@@ -77,8 +78,8 @@
     width: 100%;
     height: 100%;
     line-height: 30px;
-    background: rgba(0, 0, 0, 0.7);
     color: var(--main-text-color);
+    background-color: rgba(255, 255, 255, 0.5);
     position: absolute;
     display: flex;
     justify-content: center;
@@ -88,7 +89,7 @@
 }
 
 .image-container:hover .overlay {
-    opacity: 0.9;
+    opacity: 0.8;
     background: var(--main-bg-color); 
 }
 
@@ -143,13 +144,37 @@
     opacity: 0.8;
     background: var(--main-bg-color); 
     transition: opacity 0.5s ease;
-
 }
 
 .grid-item-exhibition img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    z-index: 1;
+}
+
+.grid-item-exhibition .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; 
+  background: var(--main-bg-color);
+  transition: opacity 0.5s ease;
+}
+
+.grid-item-exhibition .text h1 {
+  margin: 0;
+  color: var(--main-text-color);
+  z-index: 2; 
+}
+
+.grid-item-exhibition:hover .overlay {
+  opacity: 0.8;
 }
 
 /* COSMOLOGY  */
@@ -196,76 +221,9 @@
     opacity: 0.8;
   }
 
-  /* VISIT US */
-  
-  .timetable {
-    grid-column-start: span 2;
-    grid-row-start: 1;
-    padding-top: 5%;
-    box-shadow: var( --box-shadow-style);
-    border-radius: 20px;
-    background-color: var(--card-color);
-    color:var(--main-text-color);
-    text-align: center;
-    height: auto;
-  }
-  
-  .hours {
-    padding-top: 5%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-
-  }
-
-  #open {
-    border-radius:var( --border-radius-style);
-    color:#0D3655;
-    grid-column-start: 2;
-    grid-row-start: 1;
-    font-size: 40px;
-    letter-spacing: 5px;
-  }
-  
-  tr, td {
-    padding: 15px;
-    font-size: 18px;
-  }
-
-  .googlemap {
-    box-shadow: var(--box-shadow-style);
-    border-radius: 20px;
-    background-color:var(--main-bg-color);
-    color: var(--main-text-color);
-    width: 210%;
-  }
-  
-  .access {
-    grid-column-start: span 4;
-    grid-row-start: 2;
-    grid-row-end: 2;
-    box-shadow: var(--box-shadow-style);
-    border-radius: var(--border-radius-style);
-    color:var(--main-text-color);
-    background-color: var(--card-color);
-    padding: 20px;
-    line-height: 100%;
-    letter-spacing: 1px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-  }
-
-  .access h3 {
-    text-decoration: underline;
-  }
-
   /* GET INVOLVED */
 
-  .container {
+.container-inv {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto auto auto;
@@ -290,30 +248,28 @@
     border-radius: 20px;
     background-color: var(--card-color);
     color: var(--main-text-color);
-    padding-top: 10%;
     line-height: 150%;
+    padding: 1em;
 }
 
 .support {
     grid-area: support;
     grid-column: span 4;
     grid-row: 1;
-    padding-top: 20px;
-    height: 20em;
 }
 
 .textblock {
-    padding: 50px;
-    margin: 30px;
     word-wrap: break-word;
+    padding: 20px;
+    margin: 0 auto;
 }
 
 .volunteer {
     grid-area: volunteer;
     grid-column: span 2;
     grid-row: 2;
-    margin-right: 2%;
-    height: 70vh;
+    height: 100%;
+
 }
 
 .internship {
@@ -321,129 +277,88 @@
     grid-column: span 2;
     grid-row: 2;
     margin: 0;
-    height: 70vh;
+    height: 100%;
+}
+
+.formcontainer1 {
+  margin-top: 2em;
 }
 
 .getinvolved {
-    box-shadow: 0 2px 6px 0 #9F9E9E;
+    box-shadow: var(--box-shadow-style);
     border-radius: 20px;
-    background-color: #0D3655;
+    background-color:var(--main-bg-color);
 }
 
-
-/* MEDIA QUERIES */
-
-
-@media only screen and (max-width: 767px) {
-    .mobile-elements {
-        display: flex; /* or block, depending on your layout preference */
-        gap: 10px; /* Space between icons, you can adjust this */
-        justify-content: center; /* Centers the icons */
-    }
-    
-    .navlink {
-        display: none; /* Hide navlinks */
-    }
-    .text-mobile {
-        display: block;
-        background-color: #F3F3F3; /* Background color for text */
-        color: #0D3655; /* Text color */
-        padding: 20px; /* Add padding to create space around the text */
-      }
+  /* VISIT US */
   
-      .grid-item.energetica {
-          padding-top: 40%;
-      }
-    
-    .image-container:hover .overlay {
-        display: none;
-    }
-
-    .grid-container {
-        grid-gap: 0px;
-    }
-
-    .title, .subtitle {
-        font-size: 15px;
-    }
-
-    .logo {
-        width: 150px;
-        height: 150px;
-    }
-    .container {
-        grid-template-columns: 1fr; 
-        grid-template-rows: auto auto auto;
-        grid-template-areas:
-          "support"
-          "volunteer"
-          "internship";
-        padding: 5%;
-        margin: 0 auto;
-    }
-
-    .support {
-        grid-column: 1; 
-        grid-row: 1;
-        height: 100%;
-    }
-
-    .volunteer {
-        grid-column: 1;
-        grid-row: 2;
-        margin-right: 0;
-    }
-
-    .internship {
-    grid-column: 1;
-    grid-row: 3;
-}
-
-#involved-form {
-    grid-area: form;
-    grid-row: 4;
-    grid-column: 1;
-}
-
 .timetable {
-    grid-column-start: 1; 
-    grid-column-end: -1; 
+    grid-column: 1 / 3;
+    grid-row: 1;
     text-align: center; 
-}
-
-.hours {
-    flex-direction: column; 
-    padding: 10px 0; 
-    text-align: center; 
-    padding: 45px;
-}
-
-h2 {
-    grid-column-start: 1; 
-    grid-column-end: -1; 
+    width: 100%;
+    box-shadow: var( --box-shadow-style);
+    border-radius: var(--border-radius-style);
+    color:var(--main-text-color);
+    height: auto;
+    background-color: var(--card-color);
+  }
+  
+  .hours {
+    background-color: var(--card-color);
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 10px 0; 
-}
 
-.googlemap {
-    width: 100%; 
-    margin: 10px 0; 
+  }
+
+  #open {
+    border-radius:var( --border-radius-style);
+    color:#0D3655;
+    grid-column-start: 2;
+    grid-row-start: 1;
+    font-size: 40px; 
+    letter-spacing: 5px;
+    background-color: var(--card-color);
+  }
+  
+  tr, td {
+    padding: 15px;
+    font-size: 18px;
     text-align: center;
+    background-color: var(--card-color);
+  }
+
+  .googlemap {
+    grid-column: 3 / 5;  
+    grid-row: 1;  
+    box-shadow: var(--box-shadow-style);
+    border-radius: 20px;
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+    text-align: center;
+    width: 215%;
 }
 
-.access {
-    grid-column-start: 1;
-    grid-column-end: -1;  
-    flex-direction: column; 
-    text-align: left;
-}
+  .access {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    box-shadow: var(--box-shadow-style);
+    border-radius: var(--border-radius-style);
+    color:var(--main-text-color);
+    background-color: var(--card-color);
+    line-height: 100%;
+    letter-spacing: 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 1em;
+  }
 
-tr, td {
-    text-align: center; 
-}
-
-footer {
-    font-size: 13px;
-}
-
-}
+  .access h3 {
+    text-decoration: underline;
+  } 
