@@ -96,6 +96,11 @@
     text-align: center;
   }
 
+  .image-container:focus-within .overlay {
+    opacity: 0.8;
+    background: var(--main-bg-color);
+}
+
 /* EXHIBITIONS  */
 
 .grid-item-exhibition {
@@ -147,6 +152,11 @@
 
 .grid-item-exhibition:hover .overlay {
   opacity: 0.8;
+}
+
+.grid-item-exhibition:focus-within .overlay {
+  opacity: 0.8;
+  background: var(--main-bg-color);
 }
 
 /* COSMOLOGY  */
