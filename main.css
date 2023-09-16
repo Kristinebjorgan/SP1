@@ -16,6 +16,10 @@
   grid-column: 1 / 4;
 }
 
+.firstrow h1 {
+  font-size: 28px;
+}
+
 .firstrow {
   grid-row-start: 1;
   object-fit: cover;
@@ -166,7 +170,7 @@
   grid-row-end: 5;
   grid-column-start: 1;
   grid-column-end: 4;
-  background-image:url(/images/cosmologybackground.jpg);
+  background-image:url(/images/cosmobg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   height: 200vh;
@@ -181,7 +185,7 @@
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  background-image:url(/images/cosmologybackground.jpg);
+  background-image:url(/images/cosmobg.jpg);
   font-size: 50px;
   text-align: center;
 }
