@@ -9,6 +9,10 @@
     --link-color: #0D3655;
     --hover-color: #9F9E9E;
     --card-color: #DADADC;
+    --main-focus-color: #A5D8FF;
+    --main-form-color:#0D3655;
+    --main-formtext-color: #F3F3F3;
+
 
     /* Styles */
     --box-shadow-style: 0 2px 6px 0 #9F9E9E;
@@ -20,10 +24,6 @@
 
     /* Fonts */
     --main-font: 'Dosis', sans-serif;
-
-     /* Forms */
-     --main-form-color:#0D3655;
-     --main-formtext-color: #F3F3F3;
 }
 
 /* GLOBAL STYLES  */
@@ -82,6 +82,11 @@ a {
 
 a:hover {
     color: var(--hover-color);
+}
+
+:focus {
+    outline: 3px solid var(--main-focus-color);
+    transform: scale(1.08);
 }
 
 /* HEADER  */
