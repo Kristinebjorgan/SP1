@@ -170,6 +170,11 @@ header {
     position: sticky;
 }
 
+header a:focus {
+    outline: none;
+    transform: none;
+}
+
 /* FOOTER  */
 
 footer {
