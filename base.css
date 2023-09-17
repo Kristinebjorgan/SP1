@@ -227,6 +227,11 @@ footer h3 {
     max-width: 100%;
 }
 
+footer a:focus {
+    outline: none;
+    transform: none;
+}
+
 /* FORMS  */
 
 .formcontainer1 {
